@@ -8,17 +8,13 @@ import cursojava.screenmath.modelos.Serie;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Filme meuFilme = new Filme();
-        Filme outroFilme = new Filme();
-        Filme maisUmFilme = new Filme();
-        Serie minhaSerie = new Serie();
+             
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         CalculadoraDeTempo minhaCalculadora = new CalculadoraDeTempo();
         Episodio episodio = new Episodio();
         ArrayList<Filme> listdaDeFilmes = new ArrayList<>();
 
-        meuFilme.setNome("O Senhor dos Aneis - A sociedade do Anel");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O Senhor dos Aneis - A sociedade do Anel", 2001);
         meuFilme.setDuracaoEmMinutos(180);
         meuFilme.avalia(9.9);
         meuFilme.avalia(8.7);        
@@ -28,7 +24,7 @@ public class App {
         filtro.filtra(meuFilme);
         listdaDeFilmes.add(meuFilme);
 
-        outroFilme.setNome("Matrix");
+        Filme outroFilme = new Filme("Matrix", 1998);
         outroFilme.setAnoDeLancamento(1998);
         outroFilme.setDuracaoEmMinutos(200);
         outroFilme.avalia(9.9);
@@ -38,9 +34,7 @@ public class App {
         System.out.println("Tempo Calculado Atual: " + minhaCalculadora.getTempoTotal());
         listdaDeFilmes.add(outroFilme);
 
-
-        maisUmFilme.setNome("Naufrago");
-        maisUmFilme.setAnoDeLancamento(1998);
+        Filme maisUmFilme = new Filme("Naufrago", 1998);
         maisUmFilme.setDuracaoEmMinutos(150);
         maisUmFilme.avalia(9.9);
         maisUmFilme.avalia(8.7);        
@@ -54,9 +48,7 @@ public class App {
         System.out.println(listdaDeFilmes                                                                                                                                                                                        );
         System.out.println("toString do Filme: " + listdaDeFilmes.get(0).toString());
         
-
-        minhaSerie.setNome("A casa do Dragão");
-        minhaSerie.setAnoDeLancamento(2022);
+        Serie minhaSerie = new Serie("A Casa do Dragão", 2022);
         minhaSerie.setTemporadas(2);
         minhaSerie.setEpisodeosPorTemporada(12);
         minhaSerie.setMinutosPorEpisodio(40);
