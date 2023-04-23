@@ -1,3 +1,4 @@
+package Principal;
 import java.util.ArrayList;
 
 import cursojava.screenmath.calculos.CalculadoraDeTempo;
@@ -45,7 +46,7 @@ public class App {
 
         System.out.println("Tamanho da Lista: " + listdaDeFilmes.size());
         System.out.println("Primeiro Filme: " + listdaDeFilmes.get(0).getNome());
-        System.out.println(listdaDeFilmes                                                                                                                                                                                        );
+        System.out.println(listdaDeFilmes);                                                                                                                                                                                        );
         System.out.println("toString do Filme: " + listdaDeFilmes.get(0).toString());
         
         Serie minhaSerie = new Serie("A Casa do Dragão", 2022);
